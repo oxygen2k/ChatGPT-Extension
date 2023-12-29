@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "OpenAI Erweiterer",
+  "version": "1.0",
+  "description": "Fügt Knöpfe hinzu, um OpenAI-Prompts zu erweitern.",
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "permissions": ["activeTab", "https://chat.openai.com/*", "storage"],
+  "web_accessible_resources": ["magic_wand.png"]
+}

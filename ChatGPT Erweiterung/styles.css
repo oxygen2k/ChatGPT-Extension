@@ -1,0 +1,63 @@
+/* Für das Rädchen-Icon */
+.gpt-gear-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10.5px;
+    width: 30px;
+    height: 30px;
+    background: url(chrome-extension://__MSG_@@extension_id__/magic_wand.png) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 9999; /* Damit es oberhalb anderer Inhalte angezeigt wird */
+}
+
+/* Für die Knöpfe */
+.gpt-prompt-button {
+    position: absolute;
+    bottom: 50px; /* Position von unten, anpassen nach Bedarf */
+    right: 50px; /* Position von rechts, anpassen nach Bedarf */
+    margin: 5px; /* Abstand zwischen den Knöpfen */
+    z-index: 10; /* Stellen Sie sicher, dass die Knöpfe über anderen Elementen sind */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.gpt-prompt-button:hover {
+    background-color: #f0f0f0;
+}
+
+.gpt-prompt-button:hover .gpt-tooltip {
+    display: block;
+}
+
+/* Für die Tooltip-Erklärungen */
+.gpt-tooltip {
+    display: none;
+    position: absolute;
+    top: -30px; /* Positioniert den Tooltip über dem Button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.8em;
+}
+
+.gpt-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px 5px 0;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
